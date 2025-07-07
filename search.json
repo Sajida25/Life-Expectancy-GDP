@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "Life Expectancy.html",
+    "href": "Life Expectancy.html",
+    "title": "Life Expectancy Analysis",
+    "section": "",
+    "text": "Life expectancy varies significantly across countries and is closely linked to economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and Schooling affect life expectancy across populations. A multiple linear regression model was applied to predict life expectancy based on a country’s economic output and average years of education. The results indicate a positive relationship between both predictors and life expectancy: countries with higher GDP and greater access to education tend to have higher average life expectancies. Conversely, nations with lower income levels and limited educational attainment consistently show reduced life expectancy."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m Sajida Rehman. You can find me on GitHub or reach out via email at [sajidarehman259@gmail.com]\nThis project explores the factors influencing global life expectancy and is available on GitHub.\nThis project was created as a part of Kane’s Data Science Bootcamp."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Life Expectancy Model",
+    "section": "",
+    "text": "Life expectancy varies significantly across countries and is closely linked to economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and Schooling affect life expectancy across populations. A multiple linear regression model was applied to predict life expectancy based on a country’s economic output and average years of education. The results indicate a positive relationship between both predictors and life expectancy: countries with higher GDP and greater access to education tend to have higher average life expectancies. Conversely, nations with lower income levels and limited educational attainment consistently show reduced life expectancy."
+  },
+  {
+    "objectID": "index.html#summery",
+    "href": "index.html#summery",
+    "title": "Life Expectancy Model",
+    "section": "",
+    "text": "Life expectancy varies significantly across countries and is closely linked to economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and Schooling affect life expectancy across populations. A multiple linear regression model was applied to predict life expectancy based on a country’s economic output and average years of education. The results indicate a positive relationship between both predictors and life expectancy: countries with higher GDP and greater access to education tend to have higher average life expectancies. Conversely, nations with lower income levels and limited educational attainment consistently show reduced life expectancy."
+  },
+  {
+    "objectID": "index.html#multiple-linear-regression-model",
+    "href": "index.html#multiple-linear-regression-model",
+    "title": "Life Expectancy Model",
+    "section": "📐 Multiple Linear Regression Model",
+    "text": "📐 Multiple Linear Regression Model\n\\[\nY_i = \\beta_0 + \\beta_1 X_{i1} + \\beta_2 X_{i2} + \\cdots + \\beta_k X_{ik} + \\varepsilon_i\n\\]"
+  },
+  {
+    "objectID": "index.html#regression-model-life-expectancy-gdp-schooling",
+    "href": "index.html#regression-model-life-expectancy-gdp-schooling",
+    "title": "Life Expectancy Model",
+    "section": "📊 Regression Model: Life Expectancy ~ GDP + Schooling",
+    "text": "📊 Regression Model: Life Expectancy ~ GDP + Schooling"
+  },
+  {
+    "objectID": "index.html#regression-plot",
+    "href": "index.html#regression-plot",
+    "title": "Life Expectancy Model",
+    "section": "📈 Regression Plot",
+    "text": "📈 Regression Plot"
+  },
+  {
+    "objectID": "index.html#regression-table",
+    "href": "index.html#regression-table",
+    "title": "Life Expectancy Model",
+    "section": "📋 Regression Table",
+    "text": "📋 Regression Table\n\n\n                Estimate   Std. Error  t value     Pr(&gt;|t|)\n(Intercept) 44.976161158 4.842356e-01 92.88073 0.000000e+00\nGDP          0.000102693 9.725459e-06 10.55919 1.590476e-25\nSchooling    1.955282511 4.104927e-02 47.63258 0.000000e+00"
+  }
+]
