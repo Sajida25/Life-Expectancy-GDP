@@ -143,11 +143,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summery" id="toc-summery" class="nav-link active" data-scroll-target="#summery">Summery:</a></li>
-  <li><a href="#multiple-linear-regression-model" id="toc-multiple-linear-regression-model" class="nav-link" data-scroll-target="#multiple-linear-regression-model">📐 Multiple Linear Regression Model</a></li>
-  <li><a href="#regression-model-life-expectancy-gdp-schooling" id="toc-regression-model-life-expectancy-gdp-schooling" class="nav-link" data-scroll-target="#regression-model-life-expectancy-gdp-schooling">📊 Regression Model: Life Expectancy ~ GDP + Schooling</a></li>
-  <li><a href="#regression-plot" id="toc-regression-plot" class="nav-link" data-scroll-target="#regression-plot">📈 Regression Plot</a></li>
-  <li><a href="#regression-table" id="toc-regression-table" class="nav-link" data-scroll-target="#regression-table">📋 Regression Table</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">📘 Summary</a></li>
+  <li><a href="#regression-model" id="toc-regression-model" class="nav-link" data-scroll-target="#regression-model">📐 Regression Model</a></li>
+  <li><a href="#data-plot-life-expectancy-vs-gdp" id="toc-data-plot-life-expectancy-vs-gdp" class="nav-link" data-scroll-target="#data-plot-life-expectancy-vs-gdp">📊 Data Plot: Life Expectancy vs GDP</a></li>
   </ul>
 </nav>
     </div>
@@ -179,39 +177,67 @@ window.Quarto = {
 </header>
 
 
-<section id="summery" class="level2">
-<h2 class="anchored" data-anchor-id="summery">Summery:</h2>
-<p>Life expectancy varies significantly across countries and is closely linked to economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and Schooling affect life expectancy across populations. A multiple linear regression model was applied to predict life expectancy based on a country’s economic output and average years of education. The results indicate a positive relationship between both predictors and life expectancy: countries with higher GDP and greater access to education tend to have higher average life expectancies. Conversely, nations with lower income levels and limited educational attainment consistently show reduced life expectancy.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">📘 Summary</h2>
+<p>Life expectancy varies widely across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and average years of schooling affect life expectancy. A multiple linear regression model was fitted using GDP and Schooling as predictors. The results show that both variables are statistically significant and positively associated with life expectancy (p &lt; 0.001). Specifically, each additional year of schooling is associated with an increase of approximately 1.96 years in life expectancy, while increases in GDP also contribute positively, though at a smaller scale. The intercept of approximately 44.98 indicates the baseline life expectancy when both GDP and schooling are zero. These findings underscore the importance of educational access and economic development in improving public health outcomes across populations.</p>
+<hr>
 </section>
-<section id="multiple-linear-regression-model" class="level2">
-<h2 class="anchored" data-anchor-id="multiple-linear-regression-model">📐 Multiple Linear Regression Model</h2>
+<section id="regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="regression-model">📐 Regression Model</h2>
+<p>We use the following multiple linear regression model:</p>
 <p><span class="math display">\[
-Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_k X_{ik} + \varepsilon_i
+\text{LifeExpectancy}_i = \beta_0 + \beta_1 \cdot \text{GDP}_i + \beta_2 \cdot \text{Schooling}_i + \varepsilon_i
 \]</span></p>
+<hr>
 </section>
-<section id="regression-model-life-expectancy-gdp-schooling" class="level2">
-<h2 class="anchored" data-anchor-id="regression-model-life-expectancy-gdp-schooling">📊 Regression Model: Life Expectancy ~ GDP + Schooling</h2>
-</section>
-<section id="regression-plot" class="level2">
-<h2 class="anchored" data-anchor-id="regression-plot">📈 Regression Plot</h2>
+<section id="data-plot-life-expectancy-vs-gdp" class="level2">
+<h2 class="anchored" data-anchor-id="data-plot-life-expectancy-vs-gdp">📊 Data Plot: Life Expectancy vs GDP</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="regression-table" class="level2">
-<h2 class="anchored" data-anchor-id="regression-table">📋 Regression Table</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>                Estimate   Std. Error  t value     Pr(&gt;|t|)
-(Intercept) 44.976161158 4.842356e-01 92.88073 0.000000e+00
-GDP          0.000102693 9.725459e-06 10.55919 1.590476e-25
-Schooling    1.955282511 4.104927e-02 47.63258 0.000000e+00</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Regression Coefficients Table</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Std. Error</th>
+<th style="text-align: right;">t value</th>
+<th style="text-align: right;">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">44.9762</td>
+<td style="text-align: right;">0.4842</td>
+<td style="text-align: right;">92.8807</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gdp</td>
+<td style="text-align: right;">0.0001</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">10.5592</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">schooling</td>
+<td style="text-align: right;">1.9553</td>
+<td style="text-align: right;">0.0410</td>
+<td style="text-align: right;">47.6326</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -291,7 +317,7 @@ Schooling    1.955282511 4.104927e-02 47.63258 0.000000e+00</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Sajida25\.github\.io\/Life-Expectancy-GDP\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
