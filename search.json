@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "source.html",
+    "href": "source.html",
+    "title": "Source",
+    "section": "",
+    "text": "This project uses the Life Expectancy Data available on Kaggle, originally published by the World Health Organization (WHO).\n\nYears Covered: 2000 to 2015\n\nVariables Used: Life Expectancy, GDP, Schooling\n\nSource: WHO via Kaggle (2019)\n\nFormat: CSV\n\nThe dataset was filtered to exclude rows with missing values in key variables (life_expectancy, gdp, and schooling)."
+  },
+  {
+    "objectID": "source.html#data-source",
+    "href": "source.html#data-source",
+    "title": "Source",
+    "section": "",
+    "text": "This project uses the Life Expectancy Data available on Kaggle, originally published by the World Health Organization (WHO).\n\nYears Covered: 2000 to 2015\n\nVariables Used: Life Expectancy, GDP, Schooling\n\nSource: WHO via Kaggle (2019)\n\nFormat: CSV\n\nThe dataset was filtered to exclude rows with missing values in key variables (life_expectancy, gdp, and schooling)."
+  },
+  {
+    "objectID": "source.html#r-packages-used",
+    "href": "source.html#r-packages-used",
+    "title": "Source",
+    "section": "📦 R Packages Used",
+    "text": "📦 R Packages Used\nThe following R packages were used for data cleaning, visualization, and modeling:\n\n\n\n\n\n\n\nPackage\nPurpose\n\n\n\n\ntidyverse\nData manipulation and visualization (dplyr, ggplot2, readr, etc.)\n\n\njanitor\nCleaning column names for consistency\n\n\nviridis\nColor scales for ggplot2 visualizations\n\n\nknitr\nCreating nicely formatted tables in HTML\n\n\nstats (base)\nFitting the linear regression model (lm)\n\n\n\nYou can install all necessary packages using:\n```r install.packages(c(“tidyverse”, “janitor”, “viridis”, “knitr”))"
+  },
+  {
     "objectID": "Life Expectancy.html",
     "href": "Life Expectancy.html",
     "title": "Life Expectancy Analysis",
@@ -18,27 +39,41 @@
     "href": "index.html",
     "title": "Life Expectancy Model",
     "section": "",
-    "text": "Life expectancy varies widely across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and average years of schooling affect life expectancy. A multiple linear regression model was fitted using GDP and Schooling as predictors. The results show that both variables are statistically significant and positively associated with life expectancy (p &lt; 0.001). Specifically, each additional year of schooling is associated with an increase of approximately 1.96 years in life expectancy, while increases in GDP also contribute positively, though at a smaller scale. The intercept of approximately 44.98 indicates the baseline life expectancy when both GDP and schooling are zero. These findings underscore the importance of educational access and economic development in improving public health outcomes across populations."
+    "text": "Life expectancy varies significantly across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015, provided by the World Health Organization, to examine the relationship between life expectancy, Gross Domestic Product (GDP), and average years of schooling. A multiple linear regression model was fitted using GDP and schooling as predictors.\nThe results indicate that both GDP and schooling are statistically significant and positively associated with life expectancy (p &lt; 0.001). Each additional year of schooling corresponds to a substantial increase in life expectancy, while higher GDP levels also contribute positively, though to a lesser extent. These findings highlight the crucial role of education and economic development in improving population health outcomes globally."
   },
   {
     "objectID": "index.html#summary",
     "href": "index.html#summary",
     "title": "Life Expectancy Model",
     "section": "",
-    "text": "Life expectancy varies widely across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and average years of schooling affect life expectancy. A multiple linear regression model was fitted using GDP and Schooling as predictors. The results show that both variables are statistically significant and positively associated with life expectancy (p &lt; 0.001). Specifically, each additional year of schooling is associated with an increase of approximately 1.96 years in life expectancy, while increases in GDP also contribute positively, though at a smaller scale. The intercept of approximately 44.98 indicates the baseline life expectancy when both GDP and schooling are zero. These findings underscore the importance of educational access and economic development in improving public health outcomes across populations."
-  },
-  {
-    "objectID": "index.html#regression-model",
-    "href": "index.html#regression-model",
-    "title": "Life Expectancy Model",
-    "section": "📐 Regression Model",
-    "text": "📐 Regression Model\nWe use the following multiple linear regression model:\n\\[\n\\text{LifeExpectancy}_i = \\beta_0 + \\beta_1 \\cdot \\text{GDP}_i + \\beta_2 \\cdot \\text{Schooling}_i + \\varepsilon_i\n\\]"
+    "text": "Life expectancy varies significantly across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015, provided by the World Health Organization, to examine the relationship between life expectancy, Gross Domestic Product (GDP), and average years of schooling. A multiple linear regression model was fitted using GDP and schooling as predictors.\nThe results indicate that both GDP and schooling are statistically significant and positively associated with life expectancy (p &lt; 0.001). Each additional year of schooling corresponds to a substantial increase in life expectancy, while higher GDP levels also contribute positively, though to a lesser extent. These findings highlight the crucial role of education and economic development in improving population health outcomes globally."
   },
   {
     "objectID": "index.html#data-plot-life-expectancy-vs-gdp",
     "href": "index.html#data-plot-life-expectancy-vs-gdp",
     "title": "Life Expectancy Model",
     "section": "📊 Data Plot: Life Expectancy vs GDP",
-    "text": "📊 Data Plot: Life Expectancy vs GDP\n\n\n\n\n\n\n\n\n\n\n\n\nRegression Coefficients Table\n\n\n\nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n44.9762\n0.4842\n92.8807\n0\n\n\ngdp\n0.0001\n0.0000\n10.5592\n0\n\n\nschooling\n1.9553\n0.0410\n47.6326\n0"
+    "text": "📊 Data Plot: Life Expectancy vs GDP"
+  },
+  {
+    "objectID": "model.html",
+    "href": "model.html",
+    "title": "Regression Model",
+    "section": "",
+    "text": "We use the following multiple linear regression model:\n\\[\n\\text{LifeExpectancy}_{it} = \\beta_0 + \\beta_1 \\cdot \\text{GDP}_{it} + \\beta_2 \\cdot \\text{Schooling}_{it} + \\varepsilon_{it}\n\\]\n\n\n\n\n\nRegression Coefficients Table\n\n\n\nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n44.9762\n0.4842\n92.8807\n0\n\n\ngdp\n0.0001\n0.0000\n10.5592\n0\n\n\nschooling\n1.9553\n0.0410\n47.6326\n0\n\n\n\n\n\n\n\n\n\nThis table presents the results of a multiple linear regression model predicting Life Expectancy based on GDP and average years of schooling:\n\nThe Intercept (≈ 44.98) represents the estimated life expectancy when both GDP and schooling are zero.\nThe GDP coefficient (0.0001) suggests a small but statistically significant positive effect of GDP on life expectancy.\nThe Schooling coefficient (≈ 1.96) indicates that each additional year of schooling increases life expectancy by approximately 1.96 years.\nThe very low p-values (all &lt; 0.001) for both predictors confirm that these relationships are highly statistically significant.\n\nThese results highlight the strong influence of economic and educational factors on public health outcomes."
+  },
+  {
+    "objectID": "model.html#regression-coefficients-table",
+    "href": "model.html#regression-coefficients-table",
+    "title": "Regression Model",
+    "section": "",
+    "text": "Regression Coefficients Table\n\n\n\nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n44.9762\n0.4842\n92.8807\n0\n\n\ngdp\n0.0001\n0.0000\n10.5592\n0\n\n\nschooling\n1.9553\n0.0410\n47.6326\n0"
+  },
+  {
+    "objectID": "model.html#explanation-of-the-regression-coefficients-table",
+    "href": "model.html#explanation-of-the-regression-coefficients-table",
+    "title": "Regression Model",
+    "section": "",
+    "text": "This table presents the results of a multiple linear regression model predicting Life Expectancy based on GDP and average years of schooling:\n\nThe Intercept (≈ 44.98) represents the estimated life expectancy when both GDP and schooling are zero.\nThe GDP coefficient (0.0001) suggests a small but statistically significant positive effect of GDP on life expectancy.\nThe Schooling coefficient (≈ 1.96) indicates that each additional year of schooling increases life expectancy by approximately 1.96 years.\nThe very low p-values (all &lt; 0.001) for both predictors confirm that these relationships are highly statistically significant.\n\nThese results highlight the strong influence of economic and educational factors on public health outcomes."
   }
 ]

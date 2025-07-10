@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -124,8 +95,16 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./model.html"> 
+<span class="menu-text">Regression Model</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./source.html"> 
+<span class="menu-text">Source</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -144,7 +123,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">📘 Summary</a></li>
-  <li><a href="#regression-model" id="toc-regression-model" class="nav-link" data-scroll-target="#regression-model">📐 Regression Model</a></li>
   <li><a href="#data-plot-life-expectancy-vs-gdp" id="toc-data-plot-life-expectancy-vs-gdp" class="nav-link" data-scroll-target="#data-plot-life-expectancy-vs-gdp">📊 Data Plot: Life Expectancy vs GDP</a></li>
   </ul>
 </nav>
@@ -179,15 +157,9 @@ window.Quarto = {
 
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">📘 Summary</h2>
-<p>Life expectancy varies widely across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and average years of schooling affect life expectancy. A multiple linear regression model was fitted using GDP and Schooling as predictors. The results show that both variables are statistically significant and positively associated with life expectancy (p &lt; 0.001). Specifically, each additional year of schooling is associated with an increase of approximately 1.96 years in life expectancy, while increases in GDP also contribute positively, though at a smaller scale. The intercept of approximately 44.98 indicates the baseline life expectancy when both GDP and schooling are zero. These findings underscore the importance of educational access and economic development in improving public health outcomes across populations.</p>
+<p>Life expectancy varies significantly across countries and is strongly influenced by economic and educational factors. This analysis uses data from 2000 to 2015, provided by the World Health Organization, to examine the relationship between life expectancy, Gross Domestic Product (GDP), and average years of schooling. A multiple linear regression model was fitted using GDP and schooling as predictors.</p>
+<p>The results indicate that both GDP and schooling are statistically significant and positively associated with life expectancy (p &lt; 0.001). Each additional year of schooling corresponds to a substantial increase in life expectancy, while higher GDP levels also contribute positively, though to a lesser extent. These findings highlight the crucial role of education and economic development in improving population health outcomes globally.</p>
 <hr>
-</section>
-<section id="regression-model" class="level2">
-<h2 class="anchored" data-anchor-id="regression-model">📐 Regression Model</h2>
-<p>We use the following multiple linear regression model:</p>
-<p><span class="math display">\[
-\text{LifeExpectancy}_i = \beta_0 + \beta_1 \cdot \text{GDP}_i + \beta_2 \cdot \text{Schooling}_i + \varepsilon_i
-\]</span></p>
 <hr>
 </section>
 <section id="data-plot-life-expectancy-vs-gdp" class="level2">
@@ -199,45 +171,6 @@ window.Quarto = {
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Regression Coefficients Table</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">Estimate</th>
-<th style="text-align: right;">Std. Error</th>
-<th style="text-align: right;">t value</th>
-<th style="text-align: right;">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">44.9762</td>
-<td style="text-align: right;">0.4842</td>
-<td style="text-align: right;">92.8807</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">gdp</td>
-<td style="text-align: right;">0.0001</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">10.5592</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">schooling</td>
-<td style="text-align: right;">1.9553</td>
-<td style="text-align: right;">0.0410</td>
-<td style="text-align: right;">47.6326</td>
-<td style="text-align: right;">0</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 

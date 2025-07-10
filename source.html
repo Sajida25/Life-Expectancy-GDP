@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Life Expectancy Analysis – Life Expectancy-GDP</title>
+<title>Source – Life Expectancy-GDP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./source.html"> 
+    <a class="nav-link active" href="./source.html" aria-current="page"> 
 <span class="menu-text">Source</span></a>
   </li>  
 </ul>
@@ -116,15 +116,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link active" data-scroll-target="#data-source">🔍 Data Source</a></li>
+  <li><a href="#r-packages-used" id="toc-r-packages-used" class="nav-link" data-scroll-target="#r-packages-used">📦 R Packages Used</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Life Expectancy Analysis</h1>
+<h1 class="title">Source</h1>
 </div>
 
 
@@ -141,9 +148,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Life expectancy varies significantly across countries and is closely linked to economic and educational factors. This analysis uses data from 2000 to 2015 provided by the World Health Organization (via Kaggle, 2019) to examine how Gross Domestic Product (GDP) and Schooling affect life expectancy across populations. A multiple linear regression model was applied to predict life expectancy based on a country’s economic output and average years of education. The results indicate a positive relationship between both predictors and life expectancy: countries with higher GDP and greater access to education tend to have higher average life expectancies. Conversely, nations with lower income levels and limited educational attainment consistently show reduced life expectancy.</p>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">🔍 Data Source</h2>
+<p>This project uses the <strong>Life Expectancy Data</strong> available on <a href="https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who">Kaggle</a>, originally published by the World Health Organization (WHO).</p>
+<ul>
+<li><strong>Years Covered:</strong> 2000 to 2015<br>
+</li>
+<li><strong>Variables Used:</strong> Life Expectancy, GDP, Schooling<br>
+</li>
+<li><strong>Source:</strong> WHO via Kaggle (2019)<br>
+</li>
+<li><strong>Format:</strong> CSV<br>
+</li>
+<li>The dataset was filtered to exclude rows with missing values in key variables (<code>life_expectancy</code>, <code>gdp</code>, and <code>schooling</code>).</li>
+</ul>
+<hr>
+</section>
+<section id="r-packages-used" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages-used">📦 R Packages Used</h2>
+<p>The following R packages were used for data cleaning, visualization, and modeling:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>tidyverse</strong></td>
+<td>Data manipulation and visualization (<code>dplyr</code>, <code>ggplot2</code>, <code>readr</code>, etc.)</td>
+</tr>
+<tr class="even">
+<td><strong>janitor</strong></td>
+<td>Cleaning column names for consistency</td>
+</tr>
+<tr class="odd">
+<td><strong>viridis</strong></td>
+<td>Color scales for ggplot2 visualizations</td>
+</tr>
+<tr class="even">
+<td><strong>knitr</strong></td>
+<td>Creating nicely formatted tables in HTML</td>
+</tr>
+<tr class="odd">
+<td><strong>stats</strong> <em>(base)</em></td>
+<td>Fitting the linear regression model (<code>lm</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>You can install all necessary packages using:</p>
+<p>```r install.packages(c(“tidyverse”, “janitor”, “viridis”, “knitr”))</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
